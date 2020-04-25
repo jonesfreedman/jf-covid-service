@@ -22,7 +22,7 @@ namespace CovidService.Adapter.Implementation
                 }
                 else
                 {
-                    var response = client.GetStringAsync(Constants.ENDPOINTCOUNTRIES + id).Result;
+                    var response = client.GetStringAsync(Constants.ENDPOINTWORLD + "/" + id).Result;
                     covidOutput.countryModel = JsonSerializer.Deserialize<CountryModel>(response);
                 }
             }
